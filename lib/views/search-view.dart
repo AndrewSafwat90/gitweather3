@@ -1,4 +1,6 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:gitweather3/services/weather-service.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -13,7 +15,9 @@ class SearchView extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Center(
             child: TextField(
-              onSubmitted: (value) {},
+              onSubmitted: (value) {
+                WeatherService(Dio()).getCurrentWeather(cityName: value);
+              },
               decoration: InputDecoration(
                 enabledBorder: OutlineInputBorder(
                   borderSide: BorderSide(color: Colors.blue),
