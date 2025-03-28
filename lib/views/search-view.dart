@@ -1,9 +1,6 @@
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:gitweather3/cubits/get-weather-cubit/get-weather-cubit.dart';
-import 'package:gitweather3/models/weather-model.dart';
-import 'package:gitweather3/services/weather-service.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
